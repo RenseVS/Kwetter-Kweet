@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  kweet_service:
+    image: ${DOCKER_REGISTRY-}kweetservice
+    build:
+      context: .
+      dockerfile: Dockerfile
+  nosqldb:
+    image: mongo

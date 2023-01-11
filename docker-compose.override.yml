@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  kweet_service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+  nosqldb:
+    container_name: Kwetter_Kweet_service_nosqldb
+    restart: always
+    ports:
+      - "27017:27017"
